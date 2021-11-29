@@ -11,10 +11,22 @@ $output = array(
 
 $t = $_REQUEST['text'];
 
-$answer=wordcount($t);
+if($t.is_string)
+{
+	$answer=wordcount($t);
 
-$output['string']="Contains ".$answer." words";
-$output['answer']=$answer;
+	$output['string']="Contains ".$answer." words";
+	$output['answer']=$answer;
+	
+	echo json_encode($output);
+	exit();
+}
+else 
+{
+	$output['error']=TRUE;
+	$output['string']="";
+	$output['answer']=0;
 
-echo json_encode($output);
-exit();
+	echo json_encode($output);
+	exit();
+}
