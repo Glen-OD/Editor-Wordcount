@@ -14,10 +14,10 @@ $t = $_REQUEST['text'];
 if(empty($t))
 {
 	$output['error']=TRUE;
-	$output['string']="";
+	$output['string']="404";
 	$output['answer']=0;
 	// Get the new response code
-	var_dump(http_response_code(404));
+	//var_dump(http_response_code(404));
 
 	echo json_encode($output);
 	exit();
