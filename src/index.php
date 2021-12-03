@@ -16,7 +16,6 @@ if(empty($t))
 	$output['error']=TRUE;
 	$output['string']="";
 	$output['answer']=0;
-	var_dump(http_response_code(404));
 	// Get the new response code
 	var_dump(http_response_code());
 
@@ -28,7 +27,6 @@ else
 	$answer=wordcount($t);
 	$output['string']="Contains ".$answer." words";
 	$output['answer']=$answer;
-	var_dump(http_response_code(404));
 	// Get the new response code
 	var_dump(http_response_code());
 	echo json_encode($output);
