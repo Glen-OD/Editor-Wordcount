@@ -1,2 +1,3 @@
-# editor-wordcount
+# Cloud computing project
+editor-wordcount
 
